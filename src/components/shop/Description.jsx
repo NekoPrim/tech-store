@@ -45,27 +45,5 @@ export const Description = () => {
                 </tr>
             </tbody>
         </table>
-        // <div className='description'>
-        //     <img src={item.images} alt='' className='descriptionImage' />
-        //     <div className='descriptionContents'>
-        //         <div className='descriptionTitle deSpace'>
-        //             <strong>{item.title}</strong>
-        //         </div>
-        //         <div className='descriptionPrice deSpace'>
-        //             ${item.price}
-        //         </div>
-        //         <div className='theDescription deSpace'>
-        //             {item.description}
-        //         </div>
-        //         <div className='descriptionBttnContents'>
-        //             <button className='descriptionBttn deSpace'>
-        //                 Add to Cart
-        //             </button>
-        //             <button onClick={() => nav('/')} className='descriptionBttn deSpace'>
-        //                 Back
-        //             </button>
-        //         </div>
-        //     </div>
-        // </div>
-    )
-}
+    );
+};

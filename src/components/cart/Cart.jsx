@@ -4,4 +4,4 @@ export const Cart = () => {
             Cart
         </div>
     );
-}
+};

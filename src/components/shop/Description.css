@@ -1,21 +1,21 @@
 .description {
     display: flex;
-    flex-direction: row;
-    margin: 16px 8px 8px 8px;
+    flex: 1;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .descriptionImage {
+    height: 500px;
+    width: 500px;
     border-radius: 10px;
-}
-
-.descriptionContents {
-    display: flex;
-    flex-direction: column;
-    margin-left: 8px;
+    margin-bottom: 16px;
 }
 
 .descriptionTitle {
     font-size: 32px;
+    font-weight: bold;
 }
 
 .descriptionPrice {
@@ -24,4 +24,25 @@
 
 .theDescription {
     font-style: italic;
+}
+
+.deSpace {
+    padding-bottom: 16px;
+}
+
+.descriptionBttn {
+    width: 100px;
+    margin-bottom: 16px;
+}
+
+.addToCartBttn {
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
+
+.bttn {
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }

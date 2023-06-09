@@ -5,27 +5,67 @@ export const Description = () => {
     const nav = useNavigate();
     const location = useLocation();
     const { item } = location.state;
-    console.log('item', item);
+
     return (
-        <div className='description'>
-            <img src={item.images} alt='' className='descriptionImage' />
-            <div className='descriptionContents'>
-                <div className='descriptionTitle'>
-                    <strong>{item.title}</strong>
-                </div>
-                <div className='descriptionPrice'>
-                    ${item.price}
-                </div>
-                <div className='theDescription'>
-                    {item.description}
-                </div>
-                <button>
-                    Add to Cart
-                </button>
-                <button onClick={() => nav('/')}>
-                    Back
-                </button>
-            </div>
-        </div>
+        <table className='description'>
+            <tbody className='descriptionContents'>
+                <tr>
+                    <td className='descriptionTitle deSpace'>
+                        {item.title}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src={item.images} alt='' className='descriptionImage' />
+                    </td>
+                </tr>
+                <tr>
+                    <td className='descriptionPrice deSpace'>
+                        ${item.price}
+                    </td>
+                </tr>
+                <tr>
+                    <td className='theDescription deSpace'>
+                        {item.description}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button className='descriptionBttn addToCartBttn bttn'>
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onClick={() => nav('/')} className='descriptionBttn bttn'>
+                            Back
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        // <div className='description'>
+        //     <img src={item.images} alt='' className='descriptionImage' />
+        //     <div className='descriptionContents'>
+        //         <div className='descriptionTitle deSpace'>
+        //             <strong>{item.title}</strong>
+        //         </div>
+        //         <div className='descriptionPrice deSpace'>
+        //             ${item.price}
+        //         </div>
+        //         <div className='theDescription deSpace'>
+        //             {item.description}
+        //         </div>
+        //         <div className='descriptionBttnContents'>
+        //             <button className='descriptionBttn deSpace'>
+        //                 Add to Cart
+        //             </button>
+        //             <button onClick={() => nav('/')} className='descriptionBttn deSpace'>
+        //                 Back
+        //             </button>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }

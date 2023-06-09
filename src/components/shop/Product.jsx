@@ -12,7 +12,7 @@ export const Product = ({item}) => {
                 ${item.price}
             </p>
             </Link>
-            <button className='addToCartBttn'>
+            <button className='addToCartBttn bttn'>
                 Add to Cart
             </button>
 

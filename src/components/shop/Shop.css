@@ -1,0 +1,44 @@
+.shop {
+    display: flex;
+    flex: 1;
+    margin-top: 16px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.shopItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    background-color: gainsboro;
+    margin: 8px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.productImage {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 0%;
+    height: 300px;
+    width: 300px;
+}
+
+.productTitle {
+    max-width: 300px;
+}
+
+.productPrice {
+    color: grey;
+}

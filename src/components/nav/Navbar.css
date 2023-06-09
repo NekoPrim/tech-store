@@ -1,0 +1,33 @@
+
+.navbar {
+    background-color: #000000;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    color: white;
+    padding-right: 16px;
+    text-decoration: none;
+}
+
+.navLogo {
+    height: 64px;
+    color: white;
+}
+
+.navTitle {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 32px;
+    font-family: fantasy;
+}

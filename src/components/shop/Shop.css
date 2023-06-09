@@ -37,8 +37,13 @@
 
 .productTitle {
     max-width: 300px;
+    color: black;
 }
 
 .productPrice {
     color: grey;
+}
+
+.productLink {
+    text-decoration: none;
 }

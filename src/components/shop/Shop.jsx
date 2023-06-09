@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import RingLoader from 'react-spinners/RingLoader'
-import { Product } from '../product/Product';
+import { Product } from './Product';
 import './Shop.css';
 
 export const Shop = () => {
@@ -26,7 +26,7 @@ export const Shop = () => {
             <div className='shopItems'>
                 {shopItems.map((item) => {
                     return (
-                        <Product items={item} />
+                        <Product item={item} />
                     );
                 })}
             </div>

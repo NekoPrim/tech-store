@@ -4,6 +4,7 @@ import './App.css';
 
 import { Shop } from './components/shop/Shop';
 import { Cart } from './components/cart/Cart';
+import { Description } from './components/shop/Description';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={ <Shop /> } />
+          <Route path="/product/:id" Component={(props) => <Description {...props} />} />
           <Route path="/cart" element={ <Cart /> } />
+          <Route path="/" element={ <Shop /> } />
         </Routes>
       </Router>
     </div>

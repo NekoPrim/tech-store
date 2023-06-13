@@ -24,10 +24,22 @@ export const ShopContextProvider = (props) => {
     console.log('cart items', cartItems);
 
     const addToCart = (itemId) => {
-        setCartItems((prev) => (
-            console.log('prev', prev),
-            {...prev, [itemId]: prev[itemId] + 1}
-            ));
+        console.log('value', cartItems[itemId]);
+        for (let i = 0; i < cartItems.length +1; i ++);
+            if (cartItems[i] === itemId) {
+                let newItem = cartItems[i] ++;
+                setCartItems(...cartItems, {itemId: newItem});
+            }
+        // setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}));
+        // if (cartItems.length > 0) {
+        //     cartItems.map((value) => {
+        //         if ([value] === [itemId]) {
+        //             let newValue = value + 1;
+        //             setCartItems([...cartItems, {[itemId]: newValue}]);
+        //         }
+        //     })
+        // }
+        // setCartItems({[itemId]: 1});
     };
 
     const removeFromCart = (itemId) => {

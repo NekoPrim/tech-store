@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+import { ShopContext } from '../context/ShopContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Description.css';
 
 export const Description = () => {
+    const { addToCart } = useContext(ShopContext);
     const nav = useNavigate();
     const location = useLocation();
     const { item } = location.state;
@@ -31,7 +34,7 @@ export const Description = () => {
                 </tr>
                 <tr>
                     <td>
-                        <button className='descriptionBttn addToCartBttn bttn'>
+                        <button onClick={() => addToCart(item.id)} className='descriptionBttn addToCartBttn bttn'>
                             Add to Cart
                         </button>
                     </td>

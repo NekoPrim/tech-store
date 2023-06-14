@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import { ShopContext } from '../context/ShopContext'
 
-export const CartItem = ({id}) => {
-    console.log('id', id);
+export const CartItem = ({item}) => {
+    console.log('item', item);
     const [cartItem, setCartItem] = useState([]);
+    const { removeFromCart } = useContext(ShopContext);
 
     useEffect(() => {
-        axios.get(`https://api.escuelajs.co/api/v1/products/${id}`).then(({data}) => {
+        axios.get(`https://api.escuelajs.co/api/v1/products/${item.productId}`).then(({data}) => {
             setCartItem(data);
         });
     }, []);
@@ -17,9 +19,9 @@ export const CartItem = ({id}) => {
                 {cartItem.title}
             </div>
             <div>
-                <img src={cartItem.images} className='cartImage' />
+                <img src={cartItem.images} className='cartImage' alt='' />
             </div>
-            <button className='deleteBttn'>
+            <button className='deleteBttn' onClick={() => removeFromCart(item.id, cartItem.id)}>
                 Delete
             </button>
         </div>

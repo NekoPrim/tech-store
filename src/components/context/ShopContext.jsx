@@ -23,7 +23,7 @@ export const ShopContextProvider = (props) => {
     // const [cartItems, setCartItems] = useState([getDefaultCart(shopItems)]);
     // console.log('cart items', cartItems);
 
-    const cart = [];
+    let cart = [];
 
     const addToCart = (itemId) => {
         // setCartItems((cartItems) => (
@@ -36,12 +36,21 @@ export const ShopContextProvider = (props) => {
         // setCartItems(cartItems.map((item) =>
         // [item] === itemId ? { ...item, item + 1 } : item
         // ));
-        cart.push(itemId);
+        const cartId = cart.length +1;
+        cart.push({id: cartId, productId: itemId});
         console.log('cart', cart);
     };
 
-    const removeFromCart = (itemId) => {
+    const removeFromCart = (itemId, cartId) => {
         // setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}));
+        const newCart = [];
+        cart.map((item) => {
+            if (item.id !== itemId) {
+                let newCartId = newCart.length +1;
+                newCart.push({id: newCartId, productId: cartId});
+            }
+            return cart = newCart;
+        });
     };
 
     // setup to pass throu Provider

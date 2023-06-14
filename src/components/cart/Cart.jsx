@@ -11,9 +11,9 @@ export const Cart = () => {
                 Your Cart Items
             </div>
             <div className='cart3'>
-                {cart.map((id) => {
+                {cart.map((item) => {
                     return (
-                        <CartItem id={id} />
+                        <CartItem item={item} />
                     )
                 })}
             </div>

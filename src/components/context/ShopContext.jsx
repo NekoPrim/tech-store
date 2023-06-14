@@ -24,7 +24,6 @@ export const ShopContextProvider = (props) => {
     // console.log('cart items', cartItems);
 
     const cart = [];
-    console.log('cart cart', cart);
 
     const addToCart = (itemId) => {
         // setCartItems((cartItems) => (
@@ -34,13 +33,11 @@ export const ShopContextProvider = (props) => {
         //     {...cartItems, [itemId]: cartItems[itemId] ++}
         //     ));
 
-        console.log('item id', itemId);
         // setCartItems(cartItems.map((item) =>
-        // [item] === itemId ? { ...item, [itemId]: item + 1 } : item
+        // [item] === itemId ? { ...item, item + 1 } : item
         // ));
-
         cart.push(itemId);
-        console.log('cart cart cart', cart);
+        console.log('cart', cart);
     };
 
     const removeFromCart = (itemId) => {

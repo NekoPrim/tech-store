@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 // import axios from 'axios';
 
 export const ShopContext = createContext(null);
@@ -23,7 +23,8 @@ export const ShopContextProvider = (props) => {
     // const [cartItems, setCartItems] = useState([getDefaultCart(shopItems)]);
     // console.log('cart items', cartItems);
 
-    let cart = [];
+    const [cart, setCart] = useState([]);
+    // let cart = [];
 
     const addToCart = (itemId) => {
         // setCartItems((cartItems) => (
@@ -37,7 +38,8 @@ export const ShopContextProvider = (props) => {
         // [item] === itemId ? { ...item, item + 1 } : item
         // ));
         const cartId = cart.length +1;
-        cart.push({id: cartId, productId: itemId});
+        // cart.push({id: cartId, productId: itemId});
+        setCart([...cart, {id: cartId, productId: itemId}]);
         console.log('cart', cart);
     };
 
@@ -49,7 +51,10 @@ export const ShopContextProvider = (props) => {
                 let newCartId = newCart.length +1;
                 newCart.push({id: newCartId, productId: cartId});
             }
-            return cart = newCart;
+            console.log('new cart', newCart)
+            let cart = newCart
+            console.log('cart', cart);
+            return cart;
         });
     };
 
